@@ -1,0 +1,18 @@
+* https://help.github.com/articles/signing-commits-using-gpg/
+** start with gpg2 or 2.1 or higher
+** just installed sudo apt install gpgv2 guncat and see gpg2 in //usr/bin/
+* Generating a GPG key
+** try:
+```
+gpgv2 --full-generate-key
+
+```
+
+
+gpg2 --full-generate-key
+gpg: invalid option "--full-generate-key"
+jeis247@jupiter:~$
+gpgv: invalid option "--full-generate-key"
+jeis247@jupiter:~$ gpg --full-generate-key
+gpg: Invalid option "--full-generate-key"
+jeis247@jupiter:~$
