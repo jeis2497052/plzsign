@@ -10,13 +10,13 @@ gpgv2 --full-generate-key
 
 
 ```
-gpg2 --full-generate-key
-gpg: invalid option "--full-generate-key"
-jeis247@jupiter:~$
-gpgv: invalid option "--full-generate-key"
-jeis247@jupiter:~$ gpg --full-generate-key
-gpg: Invalid option "--full-generate-key"
-jeis247@jupiter:~$
+* gpg2 --full-generate-key
+* gpg: invalid option "--full-generate-key"
+* a@b:~$
+* gpgv: invalid option "--full-generate-key"
+* a@b:~$ gpg --full-generate-key
+* gpg: Invalid option "--full-generate-key"
+* a@b:~$
 ```
 * had some problems as shown below
 
@@ -37,36 +37,23 @@ gpg:   gpg --export-ownertrust > otrust.tmp
 gpg:   rm trustdb.gpg
 gpg:   gpg --import-ownertrust < otrust.tmp
 gpg: If that does not work, please consult the manual
-[eismej@falcon9 ~]$ cd .gnupg
-[eismej@falcon9 .gnupg]$ clamscan -r -i . |grep Inf
+[a@b ~]$ cd .gnupg
+[a@b .gnupg]$ clamscan -r -i . |grep Inf
 Infected files: 0
-[eismej@falcon9 .gnupg]$    gpg --export-ownertrust > otrust.tmp
-gpg: keyring `/home/eismej/.gnupg/secring.gpg' created
-gpg: keyring `/home/eismej/.gnupg/pubring.gpg' created
-[eismej@falcon9 .gnupg]$ rm trustdb.gpg
-[eismej@falcon9 .gnupg]$   gpg --import-ownertrust < otrust.tmp
-gpg: /home/eismej/.gnupg/trustdb.gpg: trustdb created
-[eismej@falcon9 .gnupg]$ ls -altr
-total 40
--rw-------.  1 eismej eismej 2649 Mar 11  2017 dirmngr.conf
--rw-------.  1 eismej eismej   32 Mar 11  2017 pubring.kbx~
--rw-------.  1 eismej eismej 5191 Mar 11  2017 gpg.conf
-drwx------. 45 eismej eismej 4096 Jan 22 12:08 ..
-drwx------.  2 eismej eismej 4096 Jan 24 10:23 private-keys-v1.d
--rw-rw-r--.  1 eismej eismej 2492 Jan 24 10:23 pubring.kbx
--rw-------.  1 eismej eismej    0 Jan 24 10:27 secring.gpg
--rw-------.  1 eismej eismej    0 Jan 24 10:27 pubring.gpg
--rw-rw-r--.  1 eismej eismej  119 Jan 24 10:27 otrust.tmp
--rw-------.  1 eismej eismej 1200 Jan 24 10:27 trustdb.gpg
-drwx------.  3 eismej eismej 4096 Jan 24 10:27 .
-[eismej@falcon9 .gnupg]$ cd
-[eismej@falcon9 ~]$ gpg2 --full-generate-key
+[a@b .gnupg]$    gpg --export-ownertrust > otrust.tmp
+gpg: keyring `/home/a/.gnupg/secring.gpg' created
+gpg: keyring `/home/a/.gnupg/pubring.gpg' created
+[a@b .gnupg]$ rm trustdb.gpg
+[a@b .gnupg]$   gpg --import-ownertrust < otrust.tmp
+gpg: /home/a/.gnupg/trustdb.gpg: trustdb created
+[a@b .gnupg]$ cd
+* [a@b ~]$ gpg2 --full-generate-key
 gpg (GnuPG) 2.2.3; Copyright (C) 2017 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
 gpg: starting migration from earlier GnuPG versions
-gpg: porting secret keys from '/home/eismej/.gnupg/secring.gpg' to gpg-agent
+gpg: porting secret keys from '/home/a/.gnupg/secring.gpg' to gpg-agent
 gpg: migration succeeded
 Please select what kind of key you want:
    (1) RSA and RSA (default)
@@ -78,7 +65,7 @@ RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (2048) 4096
 Requested keysize is 4096 bits
 Please specify how long the key should be valid.
-	 0 = key does not expire
+         0 = key does not expire
       <n>  = key expires in n days
       <n>w = key expires in n weeks
       <n>m = key expires in n months
@@ -89,11 +76,11 @@ Is this correct? (y/N) y
 
 GnuPG needs to construct a user ID to identify your key.
 
-Real name: jeis2497052
-Email address: john.eismeier@gmail.com
-Comment: for github
-You selected this USER-ID:
-    "jeis2497052 (for github) <john.eismeier@gmail.com>"
+* Real name: jeis2497052
+* Email address: john.eismeier@gmail.com
+* Comment: for github
+* You selected this USER-ID:
+*     "jeis2497052 (for github) <john.eismeier@gmail.com>"
 
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 We need to generate a lot of random bytes. It is a good idea to perform
@@ -105,8 +92,8 @@ some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
 generator a better chance to gain enough entropy.
 gpg: key 3AFC1E519A60DBAA marked as ultimately trusted
-gpg: directory '/home/eismej/.gnupg/openpgp-revocs.d' created
-gpg: revocation certificate stored as '/home/eismej/.gnupg/openpgp-revocs.d/8A6B29ACE5728C597B9579703AFC1E519A60DBAA.rev'
+gpg: directory '/home/a/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/a/.gnupg/openpgp-revocs.d/8A6B29ACE5728C597B9579703AFC1E519A60DBAA.rev'
 public and secret key created and signed.
 
 pub   rsa4096 2018-01-24 [SC]
@@ -114,4 +101,4 @@ pub   rsa4096 2018-01-24 [SC]
 uid                      jeis2497052 (for github) <john.eismeier@gmail.com>
 sub   rsa4096 2018-01-24 [E]
 
-[eismej@falcon9 ~]$
+[a@b ~]$
