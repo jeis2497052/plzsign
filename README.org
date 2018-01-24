@@ -9,6 +9,7 @@ gpgv2 --full-generate-key
 ```
 
 
+```
 gpg2 --full-generate-key
 gpg: invalid option "--full-generate-key"
 jeis247@jupiter:~$
@@ -16,3 +17,4 @@ gpgv: invalid option "--full-generate-key"
 jeis247@jupiter:~$ gpg --full-generate-key
 gpg: Invalid option "--full-generate-key"
 jeis247@jupiter:~$
+```
