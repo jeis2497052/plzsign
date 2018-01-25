@@ -102,3 +102,32 @@ uid                      jeis2497052 (for github) <john.eismeier@gmail.com>
 sub   rsa4096 2018-01-24 [E]
 
 [a@b ~]$
+
+
+
+* the Ubuntu key ???
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /home/jeis247/.gnupg/trustdb.gpg: trustdb created
+gpg: key 48CE86836B9BD325 marked as ultimately trusted
+gpg: directory '/home/jeis247/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/jeis247/.gnupg/openpgp-revocs.d/53D5FE7A638732CB9CE2071448CE86836B9BD325.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2018-01-24 [SC]
+      53D5FE7A638732CB9CE2071448CE86836B9BD325
+uid                      John Eismeier (Ubuntu) <john.eismeier@gmail.com>
+sub   rsa4096 2018-01-24 [E]
+
+* need to export
+gpg --list-secret-keys --keyid-format LONG
+then
+gpg --armor --export <fill in pub key>
