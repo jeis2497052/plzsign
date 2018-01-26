@@ -131,3 +131,8 @@ sub   rsa4096 2018-01-24 [E]
 gpg --list-secret-keys --keyid-format LONG
 then
 gpg --armor --export <fill in pub key>
+
+
+and
+* https://stackoverflow.com/questions/41052538/git-error-gpg-failed-to-sign-data
+export GPG_TTY=$(tty)
